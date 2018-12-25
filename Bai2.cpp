@@ -54,6 +54,26 @@ int TinhSTT(NgayThang n)
 	return stt;
 }
 
+int STTNgayTrongNam(NgayThang n)
+
+NgayThang NgayTuSTT(int stt, int nam)
+
+NgayThang CongNgayThang(NgayThang n, int x)
+{
+	int kq = x + STTNgayTrongNam(n);
+	int nam = n.y;
+	if(kq <= 365)
+		return NgayTuSTT(kq, y);
+	else
+		if(KiemTra(y) == 1)
+			if(kq == 366)
+				return NgayTuSTT(kq, y);
+			else
+				return NgayTuSTT(kq - 366, nam + 1);
+		else
+			return NgayTuSTT(kq - 365, nam + 1)
+}
+
 int main()
 {
 	NgayThang ngay;
