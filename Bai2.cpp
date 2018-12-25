@@ -52,10 +52,51 @@ int TinhSTT(NgayThang n)
 	return stt;
 }
 
+NgayThang NgayTuSTT(int stt, int nam)
+{
+	int t = 1;
+	int ngay = stt;
+	int kt = KiemTra(nam);
+	while(stt > 0)
+	{
+		if((kt == 1) && (t == 2))
+			stt = stt - 29;
+		else
+			stt = stt - Thang[t];
+		if(stt > 0)
+		{
+			ngay = stt;
+			t++;
+		}
+	}
+	NgayThang nt;
+	nt.ngay = ngay;
+	nt.thang = t;
+	nt.nam = nam;
+	return nt;
+}
+
+NgayThang CongNgayThang(NgayThang n, int x)
+{
+	int kq = x + TinhSTT(n);
+	int nam = n.nam;
+	if(kq <= 365)
+		return NgayTuSTT(kq, nam);
+	else
+		if(KiemTra(n.nam) == 1)
+			if(kq == 366)
+				return NgayTuSTT(kq, nam);
+			else
+				return NgayTuSTT(kq - 366, nam + 1);
+		else
+			return NgayTuSTT(kq - 365, nam + 1);
+}
+
 int main()
 {
 	NgayThang ngay;
 	string s;
+	int x;
 	Nhap(s, ngay);
 	LayNgay(s, ngay);
 	if(KiemTra(ngay.nam) == 1)
@@ -63,4 +104,5 @@ int main()
 	else
 		cout << "Nam " << ngay.nam << " khong la nam nhuan" << endl;
 	cout << "La ngay thu " << TinhSTT(ngay) << " trong nam" << endl;
+	CongNgayThang(ngay, x);
 }
