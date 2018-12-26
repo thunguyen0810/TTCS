@@ -99,10 +99,14 @@ int main()
 	int x;
 	Nhap(s, ngay);
 	LayNgay(s, ngay);
+	cout << "Nhap so nguyen duong : ";
+	cin >> x;
 	if(KiemTra(ngay.nam) == 1)
 		cout << "Nam " << ngay.nam << " la nam nhuan" << endl;
 	else
 		cout << "Nam " << ngay.nam << " khong la nam nhuan" << endl;
 	cout << "La ngay thu " << TinhSTT(ngay) << " trong nam" << endl;
-	CongNgayThang(ngay, x);
+	NgayThang t = CongNgayThang(ngay, x);
+	cout << "Ket qua sau khi cong ngay voi so nguyen duong la : ";
+	cout << t.ngay << " " << t.thang << " " << t.nam << endl;
 }
