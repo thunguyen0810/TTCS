@@ -48,7 +48,7 @@ int TinhSTT(NgayThang n)
 		stt += Thang[i];
 	stt += n.ngay;
 	if(KiemTra(n.nam) && n.thang > 2)
-		stt + 1;
+		stt += 1;
 	return stt;
 }
 
