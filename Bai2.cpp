@@ -98,7 +98,7 @@ int main()
 	string s;
 	int x;
 	Nhap(s, ngay);
-	LayNgay(s, ngay);
+	LayNgay(s, ngay); 
 	cout << "Nhap so nguyen duong : ";
 	cin >> x;
 	if(KiemTra(ngay.nam) == 1)
