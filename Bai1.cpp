@@ -117,7 +117,6 @@ int main()
 {
 	ThemMoi();
 	GhiDBVaoFile();
-	DocDBTuFile();
 	LietKe();
 //	cout << "--------------------------------------------------" << endl;
 	
