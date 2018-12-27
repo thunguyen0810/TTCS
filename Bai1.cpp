@@ -28,6 +28,7 @@ void GhiDBVaoFile()
 }
 
 //Ham nay dung de in thong tin cua tung contact
+//c : dung de gan voi cac tham so trong struct
 void InDanhBa(Contact c)
 {
 	cout << "Ten : " << c.ten << endl;
