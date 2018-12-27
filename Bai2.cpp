@@ -20,7 +20,7 @@ void Nhap(string &s)
 
 //Ham nay dung de chuyen doi kieu chuoi cua ngay thang nam thanh kieu so
 //s : chuoi ngay thang nam
-// ngay : sau khi chuyen kieu chuoi cua ngay thang nam thanh so thi dung bien ngay de gan cho cac tham so cua struct
+//ngay : sau khi chuyen kieu chuoi cua ngay thang nam thanh so thi dung bien ngay de gan cho cac tham so cua struct
 void LayNgay(string &s, NgayThang &ngay)
 {
 	ngay.ngay = atoi((s.substr(0, 2)).c_str()); // substr dung de tra ve chuoi con
