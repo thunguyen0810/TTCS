@@ -45,7 +45,7 @@ void LuuDiem(string ten, int diem)
 {
 	fstream f1;
 	f1.open("luudiem.txt", ios::out | ios::app);
-	f1 << ten << endl << diem ;
+	f1 << ten << "\t" << diem << endl;
 	f1.close();
 }
 
@@ -118,5 +118,5 @@ void XemDiem()
 int main()
 {
 	LayDe();
-//	XemDiem();
+	XemDiem();
 }
