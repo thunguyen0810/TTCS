@@ -29,6 +29,7 @@ void LayNgay(string &s, NgayThang &ngay)
 	cout << ngay.thang << " ";
 	ngay.nam = atoi((s.substr(6, 4)).c_str());
 	cout << ngay.nam << endl;
+	cout << "-------------------------" << endl;
 }
 
 //Ham dung de kiem tra nam nhuan
@@ -107,6 +108,26 @@ NgayThang CongNgayThang(NgayThang n, int x)
 			return NgayTuSTT(kq - 365, nam + 1);
 }
 
+//Ham nay dung de lay ngay tru cho mot so nguyen
+//n : bien dung de gan cho cac tham so cua struct
+//x : so nguyen duong de ngay tru vao
+//Ham nay tra ve kieu ngay thang nam va tra ve so thu tu cua ngay trong nam sau khi tru, nam xuat bi loi
+NgayThang TruNgayThang(NgayThang ngay, int x)
+{
+	int kq, year;
+	if (x < TinhSTT(ngay))
+		 kq = TinhSTT(ngay) - x;
+	else 
+	{
+		year = ngay.nam - 1; 
+		kq = TinhSTT(ngay) + 365 - x;
+		if (KiemTra(ngay.nam) == 1 && (ngay.thang > 2 || (ngay.thang == 2 && ngay.ngay == 29)))
+			kq++;
+	}
+	cout << "La ngay thu " << kq << " trong nam" << endl;
+	return NgayTuSTT(kq, year);
+}
+
 int main()
 {
 	NgayThang ngay;
@@ -114,14 +135,29 @@ int main()
 	int x;
 	Nhap(s);
 	LayNgay(s, ngay); 
+	
+	if(KiemTra(ngay.nam) == 1)
+	{
+		cout << "Nam " << ngay.nam << " la nam nhuan" << endl;
+		cout << "-------------------------" << endl;
+	}
+	else
+	{
+		cout << "Nam " << ngay.nam << " khong la nam nhuan" << endl;
+		cout << "-------------------------" << endl;
+	}
+	
 	cout << "Nhap so nguyen duong : ";
 	cin >> x;
-	if(KiemTra(ngay.nam) == 1)
-		cout << "Nam " << ngay.nam << " la nam nhuan" << endl;
-	else
-		cout << "Nam " << ngay.nam << " khong la nam nhuan" << endl;
-	cout << "La ngay thu " << TinhSTT(ngay) << " trong nam" << endl;
+	cout << "-------------------------" << endl;
+	
 	NgayThang t = CongNgayThang(ngay, x);
-	cout << "Ket qua sau khi cong ngay voi so nguyen duong la : ";
+	cout << "Ket qua sau khi cong ngay voi so nguyen duong la : " << endl;
+	cout << "La ngay thu " << TinhSTT(ngay) << " trong nam" << endl;
 	cout << t.ngay << " " << t.thang << " " << t.nam << endl;
+	cout << "-------------------------" << endl;
+	
+	cout << "Ket qua sau khi tru ngay voi so nguyen duong la : " << endl;
+	NgayThang a = TruNgayThang(ngay, x);
+	cout << a.ngay << " " << a.thang << " " << a.nam << endl;	
 }
