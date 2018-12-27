@@ -56,19 +56,17 @@ void LayDe()
 	int sl;
 	int diem = 0;
 	string s, ans, ten;
-	CH_DA ch;
+	CH_DA qs;
 	getline(f,s); 
 	sl = atoi(s.c_str());
 	
 	cout << "Nhap ten cua nguoi choi : " ;
-	cin >> ten;
 	getline(cin, ten);
 	fflush(stdin);
 	cout << "--------------------" << endl;
 	
 	for(int i = 0; i < sl; i++)
 	{
-		CH_DA qs;
 		getline(f,s);
 		qs.cauhoi = s;
 		cout << qs.cauhoi << endl;
