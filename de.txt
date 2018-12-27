@@ -1,0 +1,31 @@
+5
+Cau 1: Con vit co may chan ?
+A. 1 chan
+B. 2 chan
+C. 3 chan
+D. 4 chan
+B
+Cau 2: Con bo co may chan ?
+A. 1 chan
+B. 2 chan
+C. 3 chan
+D. 4 chan
+D
+Cau 3: Con cho co may chan?
+A. 1 chan
+B. 2 chan
+C. 3 chan
+D. 4 chan
+D
+Cau 4: Con meo co may chan?
+A. 1 chan
+B. 2 chan
+C. 3 chan
+D. 4 chan
+D
+Cau 5: Con heo co may chan?
+A. 1 chan
+B. 2 chan
+C. 3 chan
+D. 4 chan
+D
