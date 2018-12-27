@@ -119,7 +119,7 @@ int main()
 	GhiDBVaoFile();
 	DocDBTuFile();
 	LietKe();
-	cout << "--------------------------------------------------" << endl;
+//	cout << "--------------------------------------------------" << endl;
 	
 //	ChinhSua("123");
 //	cout << "Danh ba sau khi chinh sua : " << endl;
