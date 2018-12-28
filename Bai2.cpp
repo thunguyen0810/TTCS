@@ -9,8 +9,8 @@ typedef struct NgayThang
 	int nam; 
 } NgayThang;
 
-//Ham nay dung de nhap ngay thang nam
-//s : chuoi ngay thang nam
+/*Ham nay dung de nhap ngay thang nam
+  s : chuoi ngay thang nam */
 void Nhap(string &s)
 {
 	cout << "Nhap ngay thang nam : ";
@@ -18,9 +18,9 @@ void Nhap(string &s)
 	cout << s << endl;
 }
 
-//Ham nay dung de chuyen doi kieu chuoi cua ngay thang nam thanh kieu so
-//s : chuoi ngay thang nam
-//ngay : sau khi chuyen kieu chuoi cua ngay thang nam thanh so thi dung bien ngay de gan cho cac tham so cua struct
+/*Ham nay dung de chuyen doi kieu chuoi cua ngay thang nam thanh kieu so
+  s : chuoi ngay thang nam
+  ngay : sau khi chuyen kieu chuoi cua ngay thang nam thanh so thi dung bien ngay de gan cho cac tham so cua struct */
 void LayNgay(string &s, NgayThang &ngay)
 {
 	ngay.ngay = atoi((s.substr(0, 2)).c_str()); // substr dung de tra ve chuoi con
@@ -32,9 +32,9 @@ void LayNgay(string &s, NgayThang &ngay)
 	cout << "-------------------------" << endl;
 }
 
-//Ham dung de kiem tra nam nhuan
-//nam : nam can kiem tra
-//Neu nam can kiem tra la nam nhuan thi tra ve 1 con nguoc lai khong phai nam nhuan thi tra ve 0
+/*Ham dung de kiem tra nam nhuan
+  nam : nam can kiem tra
+  Neu nam can kiem tra la nam nhuan thi tra ve 1 con nguoc lai khong phai nam nhuan thi tra ve 0 */
 int KiemTra(int nam)
 {
 	if((nam % 400 == 0) || (nam % 4 == 0 && nam % 100 != 0))
@@ -46,9 +46,9 @@ int KiemTra(int nam)
 //Khai bao mang thang
 int Thang[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-//Ham dung de tinh so thu tu cua ngay trong nam
-//n : bien dung de gan cho cac tham so cua struct
-//Ham nay tra ve so thu tu cua ngay trong nam
+/*Ham dung de tinh so thu tu cua ngay trong nam
+  n : bien dung de gan cho cac tham so cua struct
+  Ham nay tra ve so thu tu cua ngay trong nam */
 int TinhSTT(NgayThang n)
 {
 	int stt = 0;
@@ -60,10 +60,10 @@ int TinhSTT(NgayThang n)
 	return stt;
 }
 
-//Ham dung de chuyen so thu tu cua ngay trong nam thanh kieu ngay thang nam
-//stt : so thu tu cua ngay trong nam
-//nam : bien nay dung de kiem tra xem nam co nhuan hay khong
-//Ham nay tra ve kieu ngay thang nam
+/*Ham dung de chuyen so thu tu cua ngay trong nam thanh kieu ngay thang nam
+  stt : so thu tu cua ngay trong nam
+  nam : bien nay dung de kiem tra xem nam co nhuan hay khong
+  Ham nay tra ve kieu ngay thang nam */
 NgayThang NgayTuSTT(int stt, int nam)
 {
 	int t = 1;
@@ -88,10 +88,10 @@ NgayThang NgayTuSTT(int stt, int nam)
 	return nt;
 }
 
-//Ham nay dung de cong mot so nguyen duong vao ngay
-//n : bien dung de gan cho cac tham so cua struct
-//x : so nguyen duong de cong vao ngay
-//Ham nay tra ve kieu ngay thang nam
+/*Ham nay dung de cong mot so nguyen duong vao ngay
+  n : bien dung de gan cho cac tham so cua struct
+  x : so nguyen duong de cong vao ngay
+  Ham nay tra ve kieu ngay thang nam */
 NgayThang CongNgayThang(NgayThang n, int x)
 {
 	int kq = x + TinhSTT(n);
@@ -108,10 +108,10 @@ NgayThang CongNgayThang(NgayThang n, int x)
 			return NgayTuSTT(kq - 365, nam + 1);
 }
 
-//Ham nay dung de lay ngay tru cho mot so nguyen
-//n : bien dung de gan cho cac tham so cua struct
-//x : so nguyen duong de ngay tru vao
-//Ham nay tra ve kieu ngay thang nam va tra ve so thu tu cua ngay trong nam sau khi tru, nam xuat bi loi
+/*Ham nay dung de lay ngay tru cho mot so nguyen
+  n : bien dung de gan cho cac tham so cua struct
+  x : so nguyen duong de ngay tru vao
+  Ham nay tra ve kieu ngay thang nam va tra ve so thu tu cua ngay trong nam sau khi tru, nam xuat bi loi */
 NgayThang TruNgayThang(NgayThang ngay, int x)
 {
 	int kq, year;
