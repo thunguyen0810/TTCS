@@ -27,8 +27,8 @@ void GhiDBVaoFile()
 	fclose(f);
 }
 
-//Ham nay dung de in thong tin cua tung contact
-//c : dung de gan voi cac tham so trong struct
+/*Ham nay dung de in thong tin cua tung contact
+  c : dung de gan voi cac tham so trong struct */
 void InDanhBa(Contact c)
 {
 	cout << "Ten : " << c.ten << endl;
@@ -39,8 +39,8 @@ void InDanhBa(Contact c)
 	cout << "-------------------------------//-------------------" << endl;
 }
 
-//Ham nay dung de them cac contact vao file nhi phan
-//Ham nay in ra man hinh thong tin cua tung contact
+/*Ham nay dung de them cac contact vao file nhi phan
+  Ham nay in ra man hinh thong tin cua tung contact */
 void ThemMoi()
 {
 	Contact c;
