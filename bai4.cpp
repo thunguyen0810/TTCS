@@ -63,21 +63,11 @@ void TaoMoi(int a[10][10], int &n)
 	f.close();
 }
 
-void Tim()
-{
-	Cap c;
-	c.Dinh = 0;
-	for(int i = 1; i < DS.size(); i++)
-	{
-		Cap c;
-		c.Dinh = 1;
-	}
-}
-
 int main()
 {
 	int A[10][10];
 	int n;
+	int Dau, Cuoi;
 	TaoMoi(A, n);
 	DocFile(A);
 	XuatDoThi(A);
