@@ -23,10 +23,10 @@ typedef struct
 vector <CH_DA> dscau;
 vector <Nguoi> danhsach;
 
-//Kiem tra xem dap an
-//A: dap an trong cau hoi
-//B: dap an cua nguoi choi
-//Ham nay tra ve true neu tra loi dung, neu tra loi sai thi tra ve false
+/* Kiem tra xem dap an
+   A: dap an trong cau hoi
+   B: dap an cua nguoi choi
+   Ham nay tra ve true neu tra loi dung, neu tra loi sai thi tra ve false */
 bool KiemTra(string A, string B)
 {
 	if(A.compare(B) == 0)
@@ -43,9 +43,9 @@ bool KiemTra(string A, string B)
 	}
 }
 
-//Ham nay dung de luu diem cua nguoi choi
-//ten : ten nguoi choi
-//diem : diem nguoi choi
+/* Ham nay dung de luu diem cua nguoi choi
+   ten : ten nguoi choi
+   diem : diem nguoi choi */
 void LuuDiem(string ten, int diem)
 {
 	fstream f1;
@@ -55,9 +55,9 @@ void LuuDiem(string ten, int diem)
 	f1.close();
 }
 
-//Lay cau hoi ra tu file
-//Ham nay yeu cau nhap ten nguoi choi, xuat ra cau hoi va yeu cau nguoi choi nhap cau tra loi
-//Ham nay con xuat ra diem cua nguoi choi sau khi tra loi cac cau hoi va luu diem cua nguoi choi
+/*Lay cau hoi ra tu file
+  Ham nay yeu cau nhap ten nguoi choi, xuat ra cau hoi va yeu cau nguoi choi nhap cau tra loi
+  Ham nay con xuat ra diem cua nguoi choi sau khi tra loi cac cau hoi va luu diem cua nguoi choi */
 void LayDe()
 {
 	ifstream f("de.txt");
