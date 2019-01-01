@@ -2,7 +2,7 @@
 #include<stdlib.h>
 using namespace std;
 
-typedef struct NgayThang
+typedef struct
 {
 	int ngay;
 	int thang;
